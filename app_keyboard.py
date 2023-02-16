@@ -2,53 +2,52 @@ from keyboard_commands import *
 from tkinter import ttk
 from ttkthemes import ThemedTk
 
-PAUSE = 3.0
-t = PAUSE
+PAUSE = 1.5
 
 def NEXT(a):
 	window.withdraw()
 	copy()
-	t
+	PAUSE
 	switch_screen()
-	t
+	PAUSE
 	select_area()
-	t
+	PAUSE
 	paste()
-	t
+	PAUSE
 	r_arrow()
-	t
+	PAUSE
 	backspace()
-	t
+	PAUSE
 	enter()
-	t
+	PAUSE
 	switch_screen()
-	t
+	PAUSE
 	d_arrow()
 	window.deiconify()
 
 def CHECK(b):
 	window.withdraw()
 	r_arrow()
-	t
+	PAUSE
 	u_arrow()
-	t
+	PAUSE
 	num(nome='CHECK')
-	t
+	PAUSE
 	l_arrow()
-	t
+	PAUSE
 	d_arrow()
 	window.deiconify()
 	
 def ERROR(c):
 	window.withdraw()
 	r_arrow()
-	t
+	PAUSE
 	u_arrow()
-	t
+	PAUSE
 	num(nome='ERROR')
-	t
+	PAUSE
 	l_arrow()
-	t
+	PAUSE
 	d_arrow()
 	window.deiconify()
 
@@ -61,10 +60,10 @@ window.geometry('200x180-120+800')
 window.resizable(False,False)
 
 title = ttk.Label(text='App Comandos', anchor='center')
-b1 = ttk.Button(window, text='Prosseguir', command=NEXT)
-b2 = ttk.Button(window, text='Confirmar', command=CHECK)
-b3 = ttk.Button(window, text='Erro', command=ERROR)
-b4 = ttk.Button(window, text='Exit', command=EXIT)
+b1 = ttk.Button(window, text='Prosseguir - Enter', command=NEXT)
+b2 = ttk.Button(window, text='Confirmar - 0', command=CHECK)
+b3 = ttk.Button(window, text='Erro - 1', command=ERROR)
+b4 = ttk.Button(window, text='Exit - Esc', command=EXIT)
 
 title.pack(fill='both', padx=5, pady=5,)
 b1.pack(fill='both', padx=5, pady=5,)
